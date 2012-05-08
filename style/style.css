@@ -1,0 +1,168 @@
+body{
+	background-image:url('reset.jpg');
+}
+
+#extra {
+	background:#ffeeee;
+}
+#experience {
+	background:#ffeeee;
+}
+
+#education{
+	background:#ddeeff;
+}
+#skills{
+	background:#eeffdd;
+}
+#references {
+	background:#ddeeff;
+}
+
+.header {
+	background:#EEEEEE;
+	color:black;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	position: fixed;
+  	height: 130px;
+	z-index:10; 
+	 -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	 -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	 box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	
+	padding:0px 10px 20px 10px;
+}
+
+h3 {
+	font-family: 'Glass Antiqua', cursive;
+	font-size: 32px;
+	padding:10px;
+	margin-bottom:150px;
+	display:inline;
+}
+
+.header h1 {
+	font-family: 'Glass Antiqua', cursive;
+	margin: 30px 0px 10px 16px;
+	padding:0px 10px 0px 10px;
+	font-size:42px;
+	text-shadow:1px 1px 0 white;
+	border-left:2px dashed black;
+	border-right:2px dashed black;
+}
+.header .name {
+    float: right;
+	position:fixed;
+	left:390px;
+}
+.header h2 {
+  font-family: 'Glass Antiqua', cursive;
+  font-weight: normal;
+  font-style: italic;
+  color:#666;
+  text-shadow:1px 1px 0 black;
+	margin-left:40px;
+}
+
+.header dl {float:right; position:fixed; right:15px;}
+
+dl dt {
+  color: black;
+}
+
+dl dd {
+    margin: 2px;
+}		
+
+ul {
+	list-style-type:none;
+}
+
+.clear{clear:both;}
+
+#education, #experience, #skills, #extra, #references {
+	padding: 50px;
+	height:500px;
+	border-bottom:2px dashed black;
+	border-left:2px dashed black;
+	border-right:2px dashed black;
+}
+
+
+.hide {
+    position: absolute;
+    display: block;
+    top: -9999em;
+    left: -9999em;
+}
+
+#edcontent{float:right;margin-top:0px;}
+
+#boras, #witt, #uppsala {
+	width:300px;
+	display:block;
+	background:white;
+	margin:20px;
+	padding:10px;
+	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	 -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	 box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	
+	 -moz-border-radius: 20px;
+	    -webkit-border-radius: 20px;
+	    -khtml-border-radius: 20px;
+	    border-radius: 20px;
+}
+#boras{margin-top:0px;}
+h4.quote {
+	display:inline;
+}
+
+#nav {
+	position:fixed;
+	top:110px;
+	left:325px;
+	z-index:11;
+}
+
+#nav li {
+	display:inline;
+	padding:10px;
+	font-family: 'Satisfy', cursive;
+	font-size:18px;
+}
+a {
+	color:black;
+	text-decoration:none;
+}
+a:hover {
+  text-shadow:2px 2px 0 #ffffdd;
+	color:black;
+	text-decoration:none;
+}
+#content {
+	margin: auto 15%;
+}
+
+#pagewrap {
+	overflow:auto;
+	top:150px;
+	position:absolute;
+	bottom: 0px;
+	right:0px;
+	left:0px;
+}
+
+h4 {
+	margin-bottom:10px;
+}
+
+h5 {
+	margin:0px;
+}
+
+#keystone, #wittenberg, #austria, #ludvika {
+	border:2px solid black;
+}
