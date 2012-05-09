@@ -84,7 +84,6 @@ ul {
 
 #education, #experience, #skills, #extra, #references {
 	padding: 50px;
-	height:500px;
 	border-bottom:2px dashed black;
 	border-left:2px dashed black;
 	border-right:2px dashed black;
@@ -158,22 +157,53 @@ a:hover {
 
 h4 {
 	margin-bottom:10px;
+	display:inline;
 }
-
 h5 {
 	margin:0px;
+	padding:0px;
+	display:block;
+}
+h6{
+	margin:0px;
+	padding:0px;
+	display:block;
 }
 
 #keystone, #wittenberg, #austria, #ludvika {
+	text-align:center;
 	border:2px solid black;
+/*	display:inline;*/
+	margin:10px 25%;
+	padding:10px;
+	
+	-moz-border-radius: 20px;
+	    -webkit-border-radius: 20px;
+	    -khtml-border-radius: 20px;
+	    border-radius: 20px;
+	
+	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	 -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	 box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
 }
 
 #map_canvas{
 	position:relative;
+	margin: 20px auto;
 	height:300px;
 	width:500px;
+	border:2px solid gray;
+}
+
+button {
+	margin-left:0px;
+	margin-top:5px;
 }
 
 #contact{
 	display:none;
+}
+
+span #headline {
+	display:inline;
 }

@@ -19,47 +19,47 @@
 
 
 			var locations = {
-				'australia_loc': {
-					label: 'Australia',
-					latitude: -34.397,
-					longitude: 150.644
+				'austria_loc': {
+					label: 'Ried im Innkreis',
+					latitude: 48.21272,
+					longitude: 13.49272
 				},
-				'uppsala_loc': {
-					label: 'Uppsala',
-					latitude: -80.397,
-					longitude: 90.644
+				'keystone_loc': {
+					label: 'Souderton Pennsylvania',
+					latitude: 40.311771,
+					longitude: -75.325176
 				},
 				'ludvika_loc': {
 					label: 'Ludvika',
 					latitude: 60.14987,
 					longitude: 15.193491
+				},
+				'witt_loc': {
+					label: 'Wittenberg University',
+					latitude: 39.933141,
+					longitude: -83.814153
 				}
 			};
 			
 			var map;
 
-			function showMap(location) {
+			function addMarker(location) {
 				var coordinates = locations[location];
 				console.log(coordinates.latitude);
-				
-				// var myOptions = {
-				// 	center: new google.maps.LatLng(coordinates.latitude, coordinates.longitude),
-				// 	zoom: 10,
-				// 	mapTypeId: google.maps.MapTypeId.ROADMAP
-				// };
-				// 
-				// var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-			
+		
 			
 				var latlang = new google.maps.LatLng(coordinates.latitude, coordinates.longitude);
-				map.setCenter(latlang);
-				map.setZoom(8);
+				var marker = new google.maps.Marker ({
+					position: latlang,
+					map:map,
+					title: coordinates.label
+				});
 			}
 			
 			$(".change_loc").click(function(){
 				var new_loc = $(this);
 				var location = new_loc.attr('id');
-				showMap(location);
+				addMarker(location);
 			})
 			
 			function initialize(){
@@ -146,53 +146,60 @@
 
 			<div id="experience">
 				<h3>Work Experience</h3>
+				<span id="headline">It's also international</span>
 				<div id="map_canvas">
 				</div>
 				<div id="ludvika">
-					<h4>Ludvika City Library</h4>
-					<h5>Library Intern</h5>
+					<h4>Library Intern</h4>					
+					<h5>Ludvika City Library</h5>
 					<h6>Ludvika, Sweden, 2012 Jan-Feb</h6>
-					
+					<button id="ludvika_loc" class="change_loc btn">Take a look</button>
 					<ul class="hide">
 						<li>Responsible for patron queries at the circulation and information desk</li>
 						<li>Process material requests from libraries across the country and Scandinavia in addition to the processing of materials within the library database.</li>
 					</ul>
-					<button id="ludvika_loc" class="change_loc">Take a look</button>
+					
 				</div>
 				
 				<div id="keystone">
-					<h4>Keystone Opportunity Center</h4>
-					<h5>ESL Adult Literacy Instructor</h5>
+					<h4>ESL Adult Literacy Instructor</h4>
+					<h5>Keystone Opportunity Center</h5>
+					
 					<h6>Souderton, PA, 2010 Sept-Dec</h6>		
 		
 					<ul class="hide">
 						<li>Coordinate and create classroom activities and lesson plans to promote adult literacy across a range of ethnicities, ages, and abilities.</li>
 						<li>Prepare and equip students to survive and thrive in American society through improved language skills and understanding of American culture.</li>
 					</ul>
+					<button id="keystone_loc" class="change_loc btn">Take a look</button>
 				</div>
 				
 				<div id="austria">	
-					<h4>Austrian-American Education Commission</h4>
-					<h5>English Teaching Assistant</h5>
+					
+					<h4>English Teaching Assistant</h4>
+					<h5>Austrian-American Education Commission</h5>
 					<h6>Ried im Innkreis, Austria, 2008-2009</h6>
 		
 					<ul class="hide">
 						<li>Leader for discussions, activities, and aid to non-native speaking teachers in the classroom.</li>
 						<li>Integrate modern teaching methods with cultural variances to promote understanding of the Eng lish language and American culture.</li>
 					</ul>
+					<button id="austria_loc" class="change_loc btn">Take a look</button>
 				</div>
 				
 				<div id="wittenberg">
-					<h4>Wittenberg University Thomas Library</h4>
-					<h5>Reference Desk-, Circulation-, and Technical Services Assistant</h5>
+					<h4>Reference Desk-, Circulation-, and Technical Services Assistant</h4>
+					<h5>Wittenberg University Thomas Library</h5>
+					
 					<h6>Springfield, OH, 2004-2008</h6>
 		
 					<ul class="hide">
 						<li>Process books, AV materials, and Inter Library Loans through a computer database.</li>
 						<li>Aid professors, students, and community members in the collection and utilization of research data.</li>
 					</ul>
+					<button id="witt_loc" class="change_loc btn">Take a look</button>
 				</div>
-				<div class="clear"></div>
+				<div style="clear:both;"></div>
 			</div>	<!-- end of id = experience -->
 	
 			<div id="skills">
