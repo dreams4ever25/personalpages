@@ -13,32 +13,67 @@
 	</script>
 	
 	<script type="text/javascript">
-
 		$(document).ready(function() {
+			
+
+
 
 			var locations = {
-				'australia': {
+				'australia_loc': {
 					label: 'Australia',
 					latitude: -34.397,
 					longitude: 150.644
 				},
-				'uppsala': {
+				'uppsala_loc': {
 					label: 'Uppsala',
 					latitude: -80.397,
 					longitude: 90.644
+				},
+				'ludvika_loc': {
+					label: 'Ludvika',
+					latitude: 60.14987,
+					longitude: 15.193491
 				}
-			}
+			};
+			
+			var map;
 
 			function showMap(location) {
+				var coordinates = locations[location];
+				console.log(coordinates.latitude);
+				
+				// var myOptions = {
+				// 	center: new google.maps.LatLng(coordinates.latitude, coordinates.longitude),
+				// 	zoom: 10,
+				// 	mapTypeId: google.maps.MapTypeId.ROADMAP
+				// };
+				// 
+				// var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+			
+			
+				var latlang = new google.maps.LatLng(coordinates.latitude, coordinates.longitude);
+				map.setCenter(latlang);
+				map.setZoom(8);
+			}
+			
+			$(".change_loc").click(function(){
+				var new_loc = $(this);
+				var location = new_loc.attr('id');
+				showMap(location);
+			})
+			
+			function initialize(){
 				var myOptions = {
-					center: new google.maps.LatLng(-34.397, 150.644),
-					zoom: 8,
+					center: new google.maps.LatLng(0,0),
+					zoom: 1,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
 				};
 
-				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+				map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);				
 			}
-
+			
+			initialize();
+				
 		});
 	</script>
 	
@@ -122,6 +157,7 @@
 						<li>Responsible for patron queries at the circulation and information desk</li>
 						<li>Process material requests from libraries across the country and Scandinavia in addition to the processing of materials within the library database.</li>
 					</ul>
+					<button id="ludvika_loc" class="change_loc">Take a look</button>
 				</div>
 				
 				<div id="keystone">
