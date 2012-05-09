@@ -13,25 +13,45 @@
 	</script>
 	
 	<script type="text/javascript">
-		function initialize() {
-			var myOptions = {
-				center: new google.maps.LatLng(-34.397, 150.644),
-				zoom: 8,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
-			};
-			var map = new google.maps.Map(document.getElementId("map_canvas"), myOptions);
-		}
+
+		$(document).ready(function() {
+
+			var locations = {
+				'australia': {
+					label: 'Australia',
+					latitude: -34.397,
+					longitude: 150.644
+				},
+				'uppsala': {
+					label: 'Uppsala',
+					latitude: -80.397,
+					longitude: 90.644
+				}
+			}
+
+			function showMap(location) {
+				var myOptions = {
+					center: new google.maps.LatLng(-34.397, 150.644),
+					zoom: 8,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+
+				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+			}
+
+		});
 	</script>
 	
 	<script> 
 		$(document).ready(function() {
 			$('#nav').scrollspy({target:"#content"});
+
 		})	
 	</script>
 	
 
 </head>
-<body onload="initialize()"> <!-- onload necessary for google maps api -->
+<body> <!-- onload necessary for google maps api -->
 	<div id="pagewrap">
 		<div class="header">
 			<div class="name">
