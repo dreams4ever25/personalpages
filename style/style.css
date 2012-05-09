@@ -144,6 +144,7 @@ a:hover {
 }
 #content {
 	margin: auto 15%;
+	position:relative;
 }
 
 #pagewrap {
@@ -165,4 +166,14 @@ h5 {
 
 #keystone, #wittenberg, #austria, #ludvika {
 	border:2px solid black;
+}
+
+#map_canvas{
+	position:relative;
+	height:300px;
+	width:300px;
+}
+
+#contact{
+	display:none;
 }
