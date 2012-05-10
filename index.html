@@ -15,7 +15,10 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			
-
+			$("#contact_button").hover(function(){
+				console.log("button hovered");
+				$("#contact").fadeIn('fast');
+			});
 
 
 			var locations = {
@@ -91,19 +94,7 @@
 		<div class="header">
 			<div class="name">
 				<h1>Katherine Konrad</h1>
-			</div>	
-			<div id="contact">
-				<dl>
-					<dt>Email</dt>
-					<dd>konradkanellbullar.woohakatie@gmail.com</dd>
-			
-					<dt>Phone</dt>
-					<dd>2153454609</dd>
-			
-					<dt>Website</dt>
-					<dd>kaybiz.net</dd>
-				</dl>	
-			</div>	
+			</div>		
 			<div id="nav" class="nav">
 				<ul>
 					<li><a href="#education">Education</a></li>
@@ -120,6 +111,7 @@
 		<div id="content" data-spy="scroll">
 			<div id="education">
 				<h3>Education</h3>
+				<span id="quote">"I love learning - and that every situation provides a unique opportunity for education."</span>
 				<div id="edcontent">
 					<div id="boras">
 						<h4>Boras University</h4>
@@ -237,7 +229,23 @@
 				</ul>
 			</div>	<!-- end div id extra -->	
 		</div>	<!-- end div id skills -->
-		<img src="images/contact.png" id="contact_button" alt="Contact Me Button"/>
+		
+		<div id="contact_button">
+			<img src="images/me.jpeg" alt="Contact Me Button"/>
+			<h6>Contact Me!</h6>
+		</div>
+		<div id="contact">
+			<dl>
+				<dt>Email</dt>
+				<dd>konradkanellbullar.woohakatie@gmail.com</dd>
+		
+				<dt>Phone</dt>
+				<dd>2153454609</dd>
+		
+				<dt>Website</dt>
+				<dd>kaybiz.net</dd>
+			</dl>	
+		</div>	<!-- end of id contact -->
 	</div>	<!-- end div id pagewrap -->
 </body>
 </html>

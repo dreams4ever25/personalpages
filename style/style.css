@@ -52,7 +52,7 @@ h3 {
 	border-right:2px dashed black;
 }
 .header .name {
-    float: right;
+    float: left;
 	margin: 15px 30% 25px 30%;
 
 }
@@ -83,6 +83,7 @@ ul {
 
 #education, #experience, #skills, #extra, #references {
 	padding: 50px;
+	padding-top:40px;
 	border-bottom:2px dashed black;
 	border-left:2px dashed black;
 	border-right:2px dashed black;
@@ -113,9 +114,11 @@ ul {
 	    -khtml-border-radius: 20px;
 	    border-radius: 20px;
 }
-#boras{margin-top:0px;}
-h4.quote {
-	display:inline;
+
+#education h4{
+	font-size:18px;
+/*	margin-left:4px;*/
+	text-align:center;
 }
 
 #nav {
@@ -211,6 +214,13 @@ span #headline {
 	position:fixed;
 	bottom:5px;
 	left:5px;
+	margin-left:10px;
+}
+
+img{
+	height:70px;
+	width:50px;
+	margin-left:10px;
 }
 
 img:hover{
