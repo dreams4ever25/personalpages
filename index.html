@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="style/style.css" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Glass+Antiqua|Satisfy' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
 	<script src="script.js" type="text/javascript"></script>
 	<script src="scrollspy.js" type="text/javascript"></script>	
 	<script type="text/javascript"
@@ -15,10 +16,19 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			
-			$("#contact_button").hover(function(){
+			/*$("#contact_button").hover(function(){
 				console.log("button hovered");
 				$("#contact").fadeIn('fast');
-			});
+			});*/
+
+      $('#contact_button img').click(function() {
+
+        $('#contact_button #contact')
+          //.show('slide', { direction: 'down' }, 500)
+          .show('scale', {}, 500);
+
+      });
+
 
 
 			var locations = {
@@ -84,6 +94,8 @@
 		$(document).ready(function() {
 			$('#nav').scrollspy({target:"#content"});
 
+
+      // Contact button
 		})	
 	</script>
 	
@@ -231,21 +243,23 @@
 		</div>	<!-- end div id skills -->
 		
 		<div id="contact_button">
+
+      <div id="contact">
+        <dl>
+          <dt>Email</dt>
+          <dd>konradkanellbullar.woohakatie@gmail.com</dd>
+      
+          <dt>Phone</dt>
+          <dd>2153454609</dd>
+      
+          <dt>Website</dt>
+          <dd>kaybiz.net</dd>
+        </dl>	
+      </div>	<!-- end of id contact -->
+
 			<img src="images/me.jpeg" alt="Contact Me Button"/>
 			<h6>Contact Me!</h6>
 		</div>
-		<div id="contact">
-			<dl>
-				<dt>Email</dt>
-				<dd>konradkanellbullar.woohakatie@gmail.com</dd>
-		
-				<dt>Phone</dt>
-				<dd>2153454609</dd>
-		
-				<dt>Website</dt>
-				<dd>kaybiz.net</dd>
-			</dl>	
-		</div>	<!-- end of id contact -->
 	</div>	<!-- end div id pagewrap -->
 </body>
 </html>
