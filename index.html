@@ -15,21 +15,14 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
-			
-			/*$("#contact_button").hover(function(){
-				console.log("button hovered");
-				$("#contact").fadeIn('fast');
-			});*/
-
-      $('#contact_button img').click(function() {
-
-        $('#contact_button #contact')
-          //.show('slide', { direction: 'down' }, 500)
-          .show('scale', {}, 500);
-
-      });
-
-
+			$("#contact_button")
+			.mouseenter(function(){
+				$("#contact_button #contact").stop(true,true).show('drop', {}, 350);
+			})
+			.mouseleave(function(){
+				console.log("mouse left");
+				$("#contact_button #contact").stop(true,true).hide('drop', {}, 350)
+			});
 
 			var locations = {
 				'austria_loc': {
@@ -243,23 +236,20 @@
 		</div>	<!-- end div id skills -->
 		
 		<div id="contact_button">
-
-      <div id="contact">
-        <dl>
-          <dt>Email</dt>
-          <dd>konradkanellbullar.woohakatie@gmail.com</dd>
-      
-          <dt>Phone</dt>
-          <dd>2153454609</dd>
-      
-          <dt>Website</dt>
-          <dd>kaybiz.net</dd>
-        </dl>	
-      </div>	<!-- end of id contact -->
+      		<div id="contact">
+ 				<a href="" target="_blank"><img src="images/delicious.png" alt="Delicious"/></a>
+ 				<a href="" target="_blank"><img src="images/email.png" alt="Email"/></a>
+ 				<a href="" target="_blank"><img src="images/facebook.png" alt="Facebook"/></a>
+ 				<a href="" target="_blank"><img src="images/google.png" alt="Google"/></a>
+ 				<a href="" target="_blank"><img src="images/twitter.png" alt="Twitter"/></a>
+				<div style="clear:both"></div>
+              <div class='arrow-border'></div>
+              <div class='arrow'></div>
+      		</div>	<!-- end of id contact -->
 
 			<img src="images/me.jpeg" alt="Contact Me Button"/>
 			<h6>Contact Me!</h6>
-		</div>
+		</div> <!-- end of id contact_button -->
 	</div>	<!-- end div id pagewrap -->
 </body>
 </html>
