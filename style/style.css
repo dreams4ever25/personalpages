@@ -1,18 +1,71 @@
-#extra {
-		background:#ffeeee;
-}
-#experience {
+#extra {background:#ffeeee;}
+#experience {background:#ffeeee;}
+#education{background:#ddeeff;}
+#skills{background:#eeffdd;}
+#references {background:#ddeeff;}
+#home {
 	background:#ffeeee;
+	height:450px;
 }
 
-#education{
-	background:#ddeeff;
+em {
+	font-size:24px;
+	font-style:normal;
+	font-weight:bold;
+	font-family:"Times New Roman", Times, serif;
 }
-#skills{
-	background:#eeffdd;
+
+#first, #second, #third {
+	font-size:22px;
+	font-family: 'Glass Antiqua', cursive;
+	line-height:25px;
 }
-#references {
-	background:#ddeeff;
+
+#first{
+	margin-top:20px;
+}
+
+#second {
+	margin: 10% 10%;
+	text-indent:40px;
+	font-family:"Times New Roman", Times, serif;
+	border: 5px dotted red;
+	padding: 15px;
+}
+
+#third {
+	background:#EEEEEE;
+	height:50px;
+	padding:10px;
+	text-align:center;
+	border:solid 1px #BBBBBB;
+  	border-radius:5px;
+  	box-shadow:0px 0px 15px #999;
+	z-index:1;
+}
+
+.home-arrow-border {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid #BBBBBB;
+	position:absolute;
+	left:27px;	
+	top:364px;
+	z-index:1000;
+}
+
+.home-arrow {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-right: 25px solid #EEEEEE;
+	position:absolute;
+	left:29px;
+	top:363px;
+	z-index:1001;
 }
 
 .header {
@@ -77,7 +130,7 @@ ul {
 
 .clear{clear:both;}
 
-#education, #experience, #skills, #extra, #references {
+#education, #experience, #skills, #extra, #references, #home {
 	padding: 50px;
 	padding-top:40px;
 	border-bottom:2px dashed black;
