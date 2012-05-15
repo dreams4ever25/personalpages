@@ -3,10 +3,7 @@
 #education{background:#ddeeff;}
 #skills{background:#eeffdd;}
 #references {background:#ddeeff;}
-#home {
-	background:#ffeeee;
-	height:450px;
-}
+#home {background:#ffeeee;}
 
 em {
 	font-size:24px;
@@ -18,53 +15,68 @@ em {
 #first, #second, #third {
 	font-size:22px;
 	font-family: 'Glass Antiqua', cursive;
-	line-height:25px;
+	line-height:20px;
 }
 
 #first{
 	margin-top:20px;
+	margin-left:auto;
+	padding:10px;
+	border:2px solid black;
+	text-align:center;
+	background:white;
+	
+	-moz-border-radius: 20px;
+	    -webkit-border-radius: 20px;
+	    -khtml-border-radius: 20px;
+	    border-radius: 20px;
+	
+	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	 -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+	 box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
 }
 
 #second {
 	margin: 10% 10%;
 	text-indent:40px;
 	font-family:"Times New Roman", Times, serif;
-	border: 5px dotted red;
 	padding: 15px;
+	line-height:25px;
 }
 
 #third {
 	background:#EEEEEE;
-	height:50px;
 	padding:10px;
 	text-align:center;
 	border:solid 1px #BBBBBB;
   	border-radius:5px;
   	box-shadow:0px 0px 15px #999;
 	z-index:1;
+	position:relative;
+	font-size:18px;
 }
 
 .home-arrow-border {
 	width: 0;
 	height: 0;
-	border-top: 25px solid transparent;
-	border-bottom: 25px solid transparent;
-	border-right: 25px solid #BBBBBB;
 	position:absolute;
-	left:27px;	
-	top:364px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid #BBBBBB;
+	left:-22px;	
+	top:12px;
 	z-index:1000;
 }
 
 .home-arrow {
 	width: 0;
 	height: 0;
-	border-top: 25px solid transparent;
-	border-bottom: 25px solid transparent;
-	border-right: 25px solid #EEEEEE;
 	position:absolute;
-	left:29px;
-	top:363px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid #EEEEEE;
+	left:-20px;
+	top:11px;
 	z-index:1001;
 }
 
@@ -86,8 +98,10 @@ h3 {
 	font-family: 'Glass Antiqua', cursive;
 	font-size: 32px;
 	padding:10px;
-	margin-bottom:150px;
 	display:inline;
+	margin:auto 10%;
+	display:block;
+	text-align:center;
 }
 
 .header h1 {
@@ -102,7 +116,7 @@ h3 {
 }
 .header .name {
     float: left;
-	margin: 15px 30% 25px 30%;
+	margin: 15px 30% 0px 30%;
 
 }
 .header h2 {
@@ -146,14 +160,14 @@ ul {
     left: -9999em;
 }
 
-#edcontent{float:right;margin-top:0px;}
-
 #boras, #witt, #uppsala {
-	width:300px;
+	width:400px;
 	display:block;
 	background:white;
-	margin:20px;
 	padding:10px;
+	margin:2% auto;
+	border:2px solid black;
+	text-align:center;
 	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
 	 -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
 	 box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
@@ -166,16 +180,16 @@ ul {
 
 #education h4{
 	font-size:18px;
-/*	margin-left:4px;*/
 	text-align:center;
 }
 
 #nav {
-	position:absolute;
+	float:left;
+	clear:both;
 	height:20px;
-	top:80px;
-	left:290px;
+	margin-left:22%;
 	padding-bottom:5px;
+	margin-bottom:0px;
 }
 #nav li {
 	display:inline;
@@ -188,7 +202,7 @@ a {
 	text-decoration:none;
 }
 a:hover {
-  text-shadow:2px 2px 0 #ffffdd;
+  	text-shadow:2px 2px 0 #ffffdd;
 	color:black;
 	text-decoration:none;
 }
@@ -207,8 +221,8 @@ a:hover {
 }
 
 h4 {
-	margin-bottom:10px;
-	display:inline;
+	margin:10px 0px;
+	display:block;
 }
 h5 {
 	margin:0px;
@@ -221,12 +235,12 @@ h6{
 	display:block;
 }
 
-#keystone, #wittenberg, #austria, #ludvika {
+#keystone, #wittenberg, #austria, #ludvika, #languages, #compskills {
 	text-align:center;
 	border:2px solid black;
-/*	display:inline;*/
 	margin:10px 25%;
 	padding:10px;
+	background:white;
 	
 	-moz-border-radius: 20px;
 	    -webkit-border-radius: 20px;
@@ -249,6 +263,35 @@ h6{
 button {
 	margin-left:0px;
 	margin-top:5px;
+}
+li {
+	font-size:16px;
+}
+small {
+	font-size:10px;
+}
+
+#languages {
+	padding-top:5px;
+}
+#languages h4, #compskills h4 {
+	font-size:18px;
+}
+
+#librarything{
+	margin:10px;
+	display:block;
+	float:left;
+}
+#extra ul {
+	display:block;
+	float:left;
+	margin:10px;
+}
+#ravelry {
+	display:block;
+	float:left;
+	margin:10px;
 }
 
 #contact{
@@ -284,10 +327,6 @@ button {
 	top:207px;
 	left:10px;
 	z-index:1000;
-}
-
-span #headline {
-	display:inline;
 }
 
 #contact_button {
